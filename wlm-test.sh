@@ -74,7 +74,7 @@ error_exit() {
 # Function to execute Splunk CLI commands using kubectl-splunk exec mode
 splunk_exec() {
     local cmd="$1"
-    kubectl splunk -vvv --namespace "$NAMESPACE" --selector "$SPLUNK_LABEL" -P "$SPLUNK_POD_NAME" exec $cmd
+    kubectl splunk --namespace "$NAMESPACE" --selector "$SPLUNK_LABEL" -P "$SPLUNK_POD_NAME" exec $cmd
 }
 
 # Function to execute Splunk REST API calls using kubectl-splunk rest mode
